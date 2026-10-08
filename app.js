@@ -1,3 +1,11 @@
+// Supabase connection
+const SUPABASE_URL = "https://lgmtosxtnkjyzjvqmpdq.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_o2wljjLuXwTl1EHe_8i_Rw_4CLs2PlA";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
 const products=[
  {name:"Sesame Seeds",category:"seeds",icon:"🌱",status:"in-stock",desc:"Natural white, hulled and premium sesame supply for export enquiries."},
  {name:"Raw Cashew Nuts",category:"nuts",icon:"🥜",status:"on-request",desc:"Nigerian raw cashew sourcing for bulk trade requirements."},
