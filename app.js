@@ -14,14 +14,14 @@ const products = [
   ["Soybeans","legumes","in-stock","https://images.unsplash.com/photo-1628773822503-930a7eaecf80?auto=format&fit=crop&w=900&q=82","Bulk soybean sourcing subject to grade, season and availability."],
   ["Pigeon Pea","legumes","on-request","https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=900&q=82","Bulk sourcing subject to specification and current availability."],
   ["Peanut","nuts","on-request","https://images.unsplash.com/photo-1567892737950-30c4db37cd89?auto=format&fit=crop&w=900&q=82","Peanut sourcing for food and commodity trade requirements."],
-  ["Tiger Nuts","nuts","on-request","https://images.unsplash.com/photo-1599599810694-b5ac7d7e0e95?auto=format&fit=crop&w=900&q=82","Dried tiger nut sourcing for domestic and international buyers."],
+  ["Tiger Nuts","nuts","on-request","https://commons.wikimedia.org/wiki/Special:FilePath/Dried_Tiger_nuts.jpg?width=900","Dried tiger nut sourcing for domestic and international buyers."],
   ["Hibiscus Flower","spices","on-request","https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=900&q=82","Dried hibiscus flower for beverage and export markets."],
   ["Chilli Pepper","spices","on-request","https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=900&q=82","Dried chilli sourcing according to buyer specification."],
   ["Ginger","spices","on-request","https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=82","Nigerian ginger supply for wholesale and export enquiries."],
   ["Maize","seeds","on-request","https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=82","Bulk maize sourcing for commercial requirements."],
   ["Sorghum","seeds","on-request","https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=900&q=82","Sorghum supply for food, feed and industrial buyers."],
   ["Millets","seeds","on-request","https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=900&q=82","Millet sourcing for food and commercial requirements."],
-  ["Shea Nuts","nuts","on-request","https://images.unsplash.com/photo-1615485737651-9a8c0a0f5b1f?auto=format&fit=crop&w=900&q=82","Shea nut sourcing for processors and international buyers."],
+  ["Shea Nuts","nuts","on-request","https://commons.wikimedia.org/wiki/Special:FilePath/Shea_nuts%40%40-.jpg?width=900","Shea nut sourcing for processors and international buyers."],
   ["Wheat","seeds","on-request","https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=82","Wheat supply enquiries subject to grade, volume and availability."]
 ];
 
