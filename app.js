@@ -118,11 +118,53 @@ $('#currency')?.addEventListener('change', e => localStorage.preferredCurrency=e
 $('#year').textContent = new Date().getFullYear();
 
 /* ---------------- Supabase Authentication ---------------- */
-const authOverlay = $('#authOverlay');
-function openAuth(){ authOverlay?.classList.add('show'); authOverlay?.setAttribute('aria-hidden','false'); }
-function closeAuth(){ authOverlay?.classList.remove('show'); authOverlay?.setAttribute('aria-hidden','true'); }
-$('#openAuth')?.addEventListener('click', openAuth); $('#openAuth2')?.addEventListener('click', openAuth); $('#authClose')?.addEventListener('click', closeAuth);
-authOverlay?.addEventListener('click', e => { if(e.target === authOverlay) closeAuth(); });
+
+$('#signupForm')?.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!supabaseClient) {
+    authMessage('Supabase is not available. Check the internet connection and script order.', true);
+    return;
+  }
+  authMessage('Creating account…');
+  const name = $('#signupName').value.trim();
+  const email = $('#signupEmail').value.trim();
+  const role = $('#signupRole').value;
+  const { data, error } = await supabaseClient.auth.signUp({
+    email,
+    password: $('#signupPassword').value,
+    options: {
+      data: { full_name: name, account_type: role },
+      emailRedirectTo: window.location.href
+    }
+  });
+  if (error) {
+    authMessage(error.message, true);
+    return;
+  }
+  if (data.session) {
+    authMessage('Account created and signed in.');
+  } else {
+    authMessage('Account created. Check your email to confirm the account, then log in.');
+  }
+});
+
+$('#resetForm')?.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!supabaseClient) {
+    authMessage('Supabase is not available.', true);
+    return;
+  }
+  authMessage('Sending reset request…');
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(
+    $('#resetEmail').value.trim(),
+    { redirectTo: window.location.href }
+  );
+  if (error) authMessage(error.message, true);
+  else authMessage('If the account exists, a password-reset email has been requested.');
+});
+
+
+
 
 function setAuthTab(tab){
   $$('[data-auth-tab]').forEach(b=>b.classList.toggle('active',b.dataset.authTab===tab));
